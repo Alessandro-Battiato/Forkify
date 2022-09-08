@@ -2,9 +2,11 @@
   "name": "forkify",
   "version": "1.0.0",
   "description": "Portfolio Website",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
-    "compile:sass": "sass --watch scss:assets/css"
+    "compile:sass": "sass --watch scss:assets/css",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "keywords": [
     "sass"
@@ -12,6 +14,8 @@
   "author": "Alessandro Salvatore Battiato",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2",
     "sass": "^1.53.0"
   },
   "dependencies": {

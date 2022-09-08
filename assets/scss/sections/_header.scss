@@ -15,7 +15,6 @@
 }
 
 .search {
-  //questo è il form
   background-color: #fff;
   border-radius: 10rem;
   display: flex;
@@ -23,15 +22,12 @@
   padding-left: 3rem;
   transition: all 0.3s;
 
-  // SI IN SOSTANZA FOCUS WITHIN FA FOCUSSARE TUTTO MA RICORDA CHE è NEL FORM CHE è APPLICATO
-
   &:focus-within {
     transform: translateY(-2px);
     box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
   }
 
   &__field {
-    //questa è la vera search bar
     border: none;
     background: none;
     font-family: inherit;
@@ -55,7 +51,7 @@
 }
 
 .nav {
-  align-self: stretch; //l'oggetto si stretcha tutto ma la scritta rimane predefinita sulla "testa" dell'oggetto
+  align-self: stretch;
   margin-right: 2.5rem;
 
   &__list {
@@ -105,7 +101,6 @@
 .bookmarks {
   padding: 1rem 0;
   position: absolute;
-  // right: 0; TOGLI TUTTI STI CODICI SPARSI A FINE SITO SE NON SONO SERVITI DOPO JS
   right: -2.5rem;
   z-index: 10;
   width: 40rem;
@@ -120,7 +115,6 @@
   }
 
   &__field {
-    //FINO AD ORA STO FIELD NON SERVE A UNA BEATA MINCHIA FORSE CON JS SCOPRIRAI A CHE CAZZO SERVE
     cursor: pointer;
     padding: 0 4rem;
     display: flex;
@@ -132,10 +126,8 @@
       background-color: $color-grey-light-2;
     }
   }
-  //FORSE SERVE PER LE RICETTE DOPO CHE LE HAI MESSE CON JS IL SEGUENTE &:HOVER NON SERVE A UN CAZZO L'HO TOLTO E FUNZIONAVA COMUNQUE IL CODICE VEDI CHE FARE
-  &:hover,//sta applicando il codice si anche al container ma è piu un QUANDO HOVERI SUL CONTAINER RENDI VISIBILE LA BOX CIOè IL NAV ECC
+  &:hover,
   .nav__btn--bookmarks:hover + & {
-    //NON SO CHE CAZZO SIGNIFIC STO & AGGIUNTO DA SOLO
     visibility: visible;
     opacity: 1;
   }

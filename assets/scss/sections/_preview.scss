@@ -1,4 +1,4 @@
-@use '../custom' as *;
+@use "../custom" as *;
 
 .preview {
   &__link {
@@ -32,7 +32,7 @@
     backface-visibility: hidden;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 100%;
       width: 100%;
@@ -70,8 +70,6 @@
     color: $color-primary;
     text-transform: uppercase;
     font-weight: 600;
-
-    // This is how text is truncated!
     text-overflow: ellipsis;
     max-width: 25rem;
     white-space: nowrap;

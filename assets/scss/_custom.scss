@@ -28,7 +28,7 @@ $bp-small: 1249px;
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; //DEVI SOSTITUIRE QUESTA RIGA ANDANDO A CAMBIARE LE DIMENSIONI DEGLI ALTRI FILE
+  font-size: 62.5%;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
   background-repeat: no-repeat;
   min-height: calc(100vh - 2 * 4vw);
   @media only screen and (max-width: $bp-small) {
-    min-height: 55vh; //HA SENSO ECCOME IL CALC PERCHè QUEI VW EXTRA SONO PER TOGLIERE QUELLI CHE SI è PRESO DI TROPPO IL CONTAINER NEL MARGIN
+    min-height: 55vh;
   }
 }
 
@@ -54,12 +54,11 @@ body {
   overflow: hidden;
   box-shadow: 0 2rem 6rem 0.5rem rgba($color-grey-dark-1, 0.2);
   display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto); //prova a togliere il minmax vedi che cambia
+  grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
     "head head"
-    "list recipe"; /*se togli solo questa riga non cambia niente mi sa
-TUTTAVIA VAI SUGLI ALTRI SECTIONS SON LI I GRID AREA COLLEGATI A QUESTO */
+    "list recipe";
   @media only screen and (max-width: $bp-large) {
     max-width: 100%;
     margin: 0;
@@ -72,8 +71,9 @@ TUTTAVIA VAI SUGLI ALTRI SECTIONS SON LI I GRID AREA COLLEGATI A QUESTO */
 
 .title-box {
   display: flex;
-  margin-top: 38rem;
+  min-height: 100vh;
   justify-content: center;
+  align-items: center;
   @media only screen and (min-width: $bp-large) {
     display: none;
   }
